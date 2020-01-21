@@ -20,7 +20,7 @@ title                    : "Feeling Lost between Statistics and Programming"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "임선우"
-description              : "익힌 것이 잊지 않기를 바라며."
+description              : "익힌 것이 잊히지 않기를 바라며."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
