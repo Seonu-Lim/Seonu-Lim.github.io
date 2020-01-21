@@ -111,8 +111,6 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "통계학과 대학원생"
   location         : "Seoul, Korea"
-  email            : "2013101066sw@gmail.com"
-  linkedin         : "seonwoolim"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -132,6 +130,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/seonu_beonu/"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/seonwoolim/"
 
 # Site Footer
 footer:
