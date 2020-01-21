@@ -111,7 +111,8 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "통계학과 대학원생"
   location         : "Seoul, Korea"
-  email            :
+  email            : "2013101066sw@gmail.com"
+  linkedin         : "seonwoolim"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
