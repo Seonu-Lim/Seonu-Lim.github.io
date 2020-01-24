@@ -11,29 +11,23 @@
 
 ``` go
 package main
+
 import (
-  "bufio"
-  "encoding/csv"
-  "fmt"
-  "os"
+	"fmt"
+	"io/ioutil"
 )
+
 func main() {
-  file, _ := os.Open("/Users/seonwoolim/Desktop/대학원/2학기/데마/data/harris.dat")
-  rdr := csv.NewReader(bufio.NewReader(file))
-  rows, _ := rdr.ReadAll()
-  for i,row := range rows {
-    for j := range row {
-      fmt.Printf("%s",rows[i][j])
-    }
-    fmt.Println()
-  }
+	file, err := ioutil.ReadFile("/Users/seonwoolim/Desktop/대학원/2학기/데마/data/harris.dat")
+	fmt.Println(string(file))
 }
 ```
 
-구글링해서 적은 이 코드의 뜻을 대충 짐작해본다. import야 뭐 패키지 가져온 것이고, main이라는 것이 내가 만들 무언가..인 것 같다. 
-
-os.Open 을 이용해서 harris.dat 파일을 가져온다. 그 다음이 뭔가 복잡한데, harris.dat 파일을 읽어서 뭔가 하려면 리더를 먼저 만들어줘야 하는가보다. 
-csv 파일만 읽으면 안되는데 아무튼 일단은 
+구글링으로 찾아와서 그대로 따라한 이 코드의 뜻을 대충 짐작해본다. 
+* import야 뭐 패키지 가져온 것이고, io/ioutil 이 편해보여서 가져와봤다.
+* main이라는 것이 내가 만들 무언가..인 것 같다. 
+* ioutil의 ReadFile 함수로 harris.dat 파일을 가져왔다. 주의할 점은, ReadFile 함수의 output은 두개라는 점이다. 두번째 output은 error 이다. 사람에 따라 error 이 없지 않을 경우 (`if err != nil `) 에러 메시지를 출력하거나 프로그램이 멈춰버리도록(`panic`,`log.Fatal` 등) 코드를 추가한 것을 봤지만 나는 귀찮아서 안했다. 
+* print를 해보기 위해서 string 으로 변환하였다. 이 부분은 추후에 없어질 예정이다. 
 
 코드를 test.go 라는 이름으로 저장한다. R이나 Python은 한 줄씩 실행이 되지만 go 는 그렇지가 않다. 
 심지어 코드 짜다 말고 저장하면 **이 변수는 왜 declare만 하고 쓰진 않은거야!** 하고 나한테 화를 낸다. 
@@ -73,3 +67,5 @@ Saving session...
 [프로세스 완료됨]
 
 ```
+
+여기서 의문점/문제가 있다. 프린트야 잘 됐는데, R 과 Python 과는 달리 이 녀석을 DataFrame 으로 생각해주지 않는 것 같다는 점이다. 따라서 찾아보니 
