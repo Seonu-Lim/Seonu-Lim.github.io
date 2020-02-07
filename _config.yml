@@ -12,14 +12,14 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
 title                    : "Feeling Lost between Statistics and Programming"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "임선우"
+name                     : ""
 description              : "익힌 것이 잊히지 않기를 바라며."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -107,7 +107,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "임선우"
+  name             : "서누"
   avatar           : "/assets/img.jpeg"
   bio              : "통계학과 대학원생"
   location         : "Seoul, Korea"
