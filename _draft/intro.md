@@ -1,4 +1,4 @@
-# 1. Data Input Part 1
+# 1. Intro : 처음 뵙겠습니다.
 
 
 써본 언어라고는 통계 분석을 위한 Python 과 R 뿐인 무지랭이이므로 천천히 진행을 해본다. Data Input 부분에서 구현할 것들은
@@ -68,10 +68,21 @@ Saving session...
 
 ```
 
-데이터도 잘 가져온 것 같고, 프린트도 잘 됐는데 프린트가 너무 예쁘게 된 걸 보니 R 과 Python 과는 달리 이 녀석을 DataFrame 으로 생각해주지 않는 것 같다. 데이터프레임을 구현한 패키지들을 찾아보니 Gota, Dataframe-go, qframe 정도가 있는 것 같다. (더 좋은 패키지를 아는 사람은 댓글로 추천해주세요!) 
+...Gophernote 를 쓰기로 결정했다. 매번 이 짓을 할 순 없어... 설치는 링크 https://github.com/gopherdata/gophernotes 를 참고했다. ~~그리고 수많은 오류들과 싸우게 되는데...~~
 
-셋 중에 무엇을 쓸까 고민하다가, 결론적으로는 **Gota**를 쓰려고 한다. 세 패키지를 대충 봤을 때에는 의심의 여지도 없이 **Dataframe-go** 를 사용하기로 했었다. 왜냐하면 코드의 모습이 Python 의 Pandas 와 아주 흡사하기 때문이다. 하지만 하필 발견한 교재 *Machine Learning with Go Quick Start Guide* 가 Gota를 사용하고 있으므로 python 이랑 비슷한 거 쓸거면 굳이 왜 Go 를 배우겠냐고 행복회로를 돌려보겠다.
+여기서 참고사항 : 나는 mac osx 를 사용하고 있다. 그리고 컴알못이지만 그저 시키는대로 흘러가는대로 해낼 뿐이다.
 
-참고로, qframe의 속도가 Gota 보다 빠르다는 소문이 있으나 나는 고린이이므로 검증하지는 못하겠다. 아무튼 Gota 를 쓰겠다 이거임.
+링크의 첫번째 줄을 실행시켰다.
+
+```
+$ env GO111MODULE=on go get github.com/gopherdata/gophernotes
+```
+
+그랬더니 pkg-config 가 없어서 안된다고 한다. ~~그게뭔데~~ 그래서 설치를 했다. 설치 방법은 이 링크 참고 : http://macappstore.org/pkg-config/
+
+
+
+
+
 
 
