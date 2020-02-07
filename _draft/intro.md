@@ -1,12 +1,7 @@
-# 1. Intro : 처음 뵙겠습니다.
+# 1. Intro : 처음 뵙겠습니다. Gophernote 쓰게 해주세요.
 
 
-써본 언어라고는 통계 분석을 위한 Python 과 R 뿐인 무지랭이이므로 천천히 진행을 해본다. Data Input 부분에서 구현할 것들은
-
-* User 가 데이터의 경로를 입력하도록 한다.
-* 그러면 그 경로로 가서 데이터를 가져온다.
-
-..뿐인데, 여기서 '데이터를 가져온다' 부분만 해보되, 데이터를 프린트해보도록 하겠다. 대충 검색해서 나온 코드는 아래와 같다. 데이터마이닝 수업에 쓰던 샘플 데이터를 사용했다. 
+써본 언어라고는 통계 분석을 위한 Python 과 R 뿐인 무지랭이이므로 천천히 진행을 해본다.
 
 
 ``` go
@@ -23,25 +18,26 @@ func main() {
 }
 ```
 
-구글링으로 찾아와서 그대로 따라한 이 코드의 뜻을 대충 짐작해본다. 
+구글링으로 찾아와서 그대로 따라한 이 코드의 뜻을 대충 짐작해본다.
 * import야 뭐 패키지 가져온 것이고, io/ioutil 이 편해보여서 가져와봤다.
-* main이라는 것이 내가 만들 무언가..인 것 같다. 
-* ioutil의 ReadFile 함수로 harris.dat 파일을 가져왔다. 주의할 점은, **ReadFile 함수의 output은 두개라는 점이다**. 두번째 output은 error 이다. 사람에 따라 error 이 없지 않을 경우 (`if err != nil `) 에러 메시지를 출력하거나 프로그램이 멈춰버리도록(`panic`,`log.Fatal` 등) 코드를 추가한 것을 봤지만 나는 귀찮아서 안했다. 
-* print를 해보기 위해서 string 으로 변환하였다. 이 부분은 추후에 없어질 예정이다. 
+* main이라는 것이 내가 만들 무언가..인 것 같다.
+* ioutil의 ReadFile 함수로 harris.dat 파일을 가져왔다. 주의할 점은, **ReadFile 함수의 output은 두개라는 점이다**.
+두번째 output은 error 이다. 사람에 따라 error 이 없지 않을 경우 (`if err != nil `) 에러 메시지를 출력하거나 프로그램이 멈춰버리도록(`panic`,`log.Fatal` 등) 코드를 추가한 것을 봤지만 나는 귀찮아서 안했다.
+* print를 해보기 위해서 string 으로 변환하였다. 이 부분은 추후에 없어질 예정이다.
 
-코드를 test.go 라는 이름으로 저장한다. R이나 Python은 한 줄씩 실행이 되지만 go 는 그렇지가 않다. 
-심지어 코드 짜다 말고 저장하면 **이 변수는 왜 declare만 하고 쓰진 않은거야!** 하고 나한테 화를 낸다. 
-그러니 중간에 코드를 잘 짰는지 보고 싶다면 대충 코드를 마무리한 척 하고 돌려보도록 하자. 
+코드를 test.go 라는 이름으로 저장한다. R이나 Python은 한 줄씩 실행이 되지만 go 는 그렇지가 않다.
+심지어 코드 짜다 말고 저장하면 **이 변수는 왜 declare만 하고 쓰진 않은거야!** 하고 나한테 화를 낸다.
+그러니 중간에 코드를 잘 짰는지 보고 싶다면 대충 코드를 마무리한 척 하고 돌려보도록 하자.
 
 아무튼 저런 코드를 쓰고 저장하면 그냥 test.go 파일이 하나 만들어져 있을 뿐이다.
 이 놈을 실행하려면 터미널에서 저 파일이 있는 디렉토리로 간 다음에 go build test.go 하면 된다.
-그러면 드디어 실행! 
+그러면 드디어 실행!
 
-이 아니고 같은 디렉토리에 exe 파일이 생긴다. ~개빡쳐~ 그걸 실행시켜야 비로소 나의 코드가 실행되는 것이다. 아 참으로 신묘하다. 
+이 아니고 같은 디렉토리에 exe 파일이 생긴다. ~개빡쳐~ 그걸 실행시켜야 비로소 나의 코드가 실행되는 것이다. 아 참으로 신묘하다.
 결과물은 아래와 같이 예쁘게 프린트가 되더라.
 
 
-``` 
+```
 Last login: Fri Jan 24 12:37:03 on ttys001
 (base) seonui-iMac:~ seonwoolim$ /Users/seonwoolim/Desktop/test ; exit;
 3900 12 0 1 0
@@ -70,19 +66,43 @@ Saving session...
 
 ...Gophernote 를 쓰기로 결정했다. 매번 이 짓을 할 순 없어... 설치는 링크 https://github.com/gopherdata/gophernotes 를 참고했다. ~~그리고 수많은 오류들과 싸우게 되는데...~~
 
-여기서 참고사항 : 나는 mac osx 를 사용하고 있다. 그리고 컴알못이지만 그저 시키는대로 흘러가는대로 해낼 뿐이다.
-
-링크의 첫번째 줄을 실행시켰다.
+여기서 참고사항 : 나는 mac osx 를 사용하고 있다. 그리고 컴알못이지만 그저 시키는대로 흘러가는대로 해낼 뿐이다. 무슨 일이 있었는지 하나하나 쓰는 이유는? 혹시나 gophernote를 쓰려는 mac 이용자가 나처럼 gophernote 설치에만 한세월 걸리지 않기를 바라는 마음이 들어서이다. 아무튼 링크의 첫번째 줄을 터미널에 실행시켰다.
 
 ```
 $ env GO111MODULE=on go get github.com/gopherdata/gophernotes
 ```
 
-그랬더니 pkg-config 가 없어서 안된다고 한다. ~~그게뭔데~~ 그래서 설치를 했다. 설치 방법은 이 링크 참고 : http://macappstore.org/pkg-config/
+그랬더니 pkg-config 가 없어서 안된다고 한다. ~~그게뭔데~~ 그래서 설치를 했다. 설치 방법은 이 링크 참고 : http://macappstore.org/pkg-config
 
+그리고 다시 위의 명령어를 실행시키니까, **또 오류가 난다!** 이번엔 libzmq 라는 패키지가 없다고 한다. ~~그게 뭔데!!~~ 설치 방법은 그냥 `brew install zmq` 하면 된다.
 
+이젠 돌아가겠지? 하고 기다렸더니 잘 돌아갔다. **휴!** 이제 다 된 거겠지? 하고 나머지 줄들을 실행시켰다.
 
+```
+$mkdir -p ~/Library/Jupyter/kernels/gophernotes
+$cd ~/Library/Jupyter/kernels/gophernotes
+$cp "$(go env GOPATH)"/pkg/mod/github.com/gopherdata/gophernotes@v0.6.1/kernel/*  "."
 
+```
 
+결과는 오류.
 
+```
+cp: ./kernel.json: Permission denied
+cp: ./kernel.json.in: Permission denied
+cp: ./logo-32x32.png: Permission denied
+cp: ./logo-64x64.png: Permission denied
+```
+...라고 뜬다. 왜냐하면 이새끼가 날 얕보고 있기 때문이다. 기계덩어리에게 인간의 권력을 보여주자. 마지막으로 썼던 명령어 맨 앞에 sudo 를 붙이기만 하면 된다. 이제 마지막 줄만 남았다.
 
+```
+$sed "s|gophernotes|$(go env GOPATH)/bin/gophernotes|" < kernel.json.in > kernel.json
+```
+실행했더니 역시나 permission denied. sudo로 혼내줘도 permission denied. 아아악! 이렇게 하랬잖아요! 찾아보니 누군가가 저기 kernel.json.in 을 감싸고 있는 뾰족괄호들을 없애서 해결했다. (sudo 는 앞에 붙인 상태)그래서 나도 해봤더니, 됐다! 설치가 잘 됐는지 확인하기 위해 다음의 명령을 실행시켜보자.
+
+```
+$ "$(go env GOPATH)"/bin/gophernotes
+```
+오늘의 날짜와 시간, 그리고 Need a command line argument specifying the connection file. 이라는 문장이 나오면 잘 설치된 것이라고 한다. 아이 행복해! 이제 Gophernote를 사용해볼까?
+
+...Kernel Error이 난다. 아 세상에..
