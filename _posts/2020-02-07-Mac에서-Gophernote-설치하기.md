@@ -1,4 +1,4 @@
-# Mac에서의 Gophernote 설치 (Kernel Error)
+# (Kernel Error)
 
 1. Terminal 을 엽니다.
 2. pkg-config 와 libzmq 를 설치합니다.
