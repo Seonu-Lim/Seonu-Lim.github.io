@@ -1,4 +1,4 @@
-# (Kernel Error)
+# 맥에서 gophernotes 설치하기.
 
 1. Terminal 을 엽니다.
 2. pkg-config 와 libzmq 를 설치합니다.
@@ -13,4 +13,8 @@ $cp "$(go env GOPATH)"/pkg/mod/github.com/gopherdata/gophernotes@v0.6.1/kernel/*
 $sed "s|gophernotes|$(go env GOPATH)/bin/gophernotes|" < kernel.json.in > kernel.json
 ```
   * 세번째 줄에서 Permission Denied 오류가 난다면, 마지막 줄만 앞에 sudo 를 붙여서 다시 실행시키면 됩니다.
-  * ( *확실하지 않은 해결책* ) 네번째 줄에서 Permission Denied 오류가 난다면, 앞에 sudo를 붙이고 kernel.json.in 양 옆의 뾰족 괄호를 없애면 실행은 되며, 설치 확인을 위해 `$ "$(go env GOPATH)"/bin/gophernotes`를 실행시키면 제대로 설치되었다고 한다. 하지만 현재 블로그 주인은 Kernel Error에 봉착했음. 우당탕탕 1 참고.
+  * 네번째 줄에서 Permission Denied 오류가 난다면, 다음의 코드를 실행한 뒤에 네번째 줄을 재시도해봅시다. 
+
+```
+$chmod +w ./kernel.json
+```
