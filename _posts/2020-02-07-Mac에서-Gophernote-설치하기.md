@@ -12,8 +12,8 @@ $cd ~/Library/Jupyter/kernels/gophernotes
 $cp "$(go env GOPATH)"/pkg/mod/github.com/gopherdata/gophernotes@v0.6.1/kernel/*  "."
 $sed "s|gophernotes|$(go env GOPATH)/bin/gophernotes|" < kernel.json.in > kernel.json
 ```
-  * 세번째 줄에서 Permission Denied 오류가 난다면, 마지막 줄만 앞에 sudo 를 붙여서 다시 실행시키면 됩니다.
-  * 네번째 줄에서 Permission Denied 오류가 난다면, 다음의 코드를 실행한 뒤에 네번째 줄을 재시도해봅시다. 
+  * 네번째 줄에서 Permission Denied 오류가 난다면, 마지막 줄만 앞에 sudo 를 붙여서 다시 실행시키면 됩니다.
+  * 다섯번째 줄에서 Permission Denied 오류가 난다면, 다음의 코드를 실행한 뒤에 네번째 줄을 재시도해봅시다.
 
 ```
 $chmod +w ./kernel.json
