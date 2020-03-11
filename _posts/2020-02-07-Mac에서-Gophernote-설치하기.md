@@ -1,3 +1,10 @@
+---
+title: "Mac 에서 Gophernote 설치하기"
+categories:
+  - Golang
+last_modified_at: 2020-02-07T13:00:00+09:00
+---
+
 1. Terminal 을 엽니다.
 2. pkg-config 와 libzmq 를 설치합니다.
   * pkg-config 설치방법 : 터미널에서  `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null` 입력 후 엔터. 중간에 컴퓨터 패스워드 입력해야 함. 모두 실행되면 `brew install pkg-config` 실행.
