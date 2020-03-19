@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seonu-lim.github.io/sitemap.xml
