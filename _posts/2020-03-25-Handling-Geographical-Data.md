@@ -21,20 +21,20 @@ import shapely.wkt
 
 그리고 받아놓은 shp 파일을 데려온다.
 
-```Python
+```python
 korea = gpd.read_file("CTPRVN_201905")
 ```
 
 좌표계 두개 (원래 좌표계와 바꿀 좌표계)를 변수에 넣어둔다. 좌표계들의 EPSG 코드를 알아내서 쓰면 된다. 나는 [데이터사이언스 스쿨의 포스트](https://datascienceschool.net/view-notebook/ef921dc25e01437b9b5c532ba3b89b02/) 를 참고하였다.
 
-```Python
+```python
 inProj = Proj({'init': 'epsg:5179'})
 outProj = Proj({'init': 'epsg:4326'})
 ```
 
 그리고 이제 변환하면 된다.
 
-```Python
+```python
 for i in range(len(korea.geometry)) :
     region = korea.geometry[i]
     if region.type == "Polygon" :
