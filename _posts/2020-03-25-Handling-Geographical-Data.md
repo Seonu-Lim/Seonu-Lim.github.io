@@ -10,7 +10,7 @@ use_math: false
 
 내 목표는 지도 위 특정 장소들에 점을 찍는 것이었는데, 문제는 점들이 위도, 경도로 되어있다는 점이었다. 물론 점들을 UTM-K 로 변환하면 편하겠지만, 나 포함 다른 사람들이 더 익숙한 위경도 데이터로 바꾸고 싶었다. 그리고 그걸 ~~굳이~~ 파이썬으로 하고 싶었다. 문제는 점 하나 변환하는 건 일도 아니지만 이 데이터는 수많은 Polygon 들로 이루어져 있다는 점이었다. Polygon 한개는 서울 기준으로 8000개가 넘는 점들로 이루어져 있다. 그리고 섬이 많은 전라도 쪽 등은 MultiPolygon 으로 되어 있어서 생각보다 까다로웠다. MultyPolygon 은 Polygon 으로 나눈 뒤 그것을 다시 점으로 나누고 위경도로 변환 후에 다시 Polygon 으로 합치고 그걸 또 MultiPolygon으로 바꾸는 과정을 거쳤다. 먼저 필요한 파이썬 패키지는 아래와 같다.
 
-```Python
+```python
 import pandas as pd
 import geopandas as gpd
 from pyproj import Proj, transform
