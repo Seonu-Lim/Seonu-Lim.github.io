@@ -133,7 +133,9 @@ author:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin-in"
       url: "https://www.linkedin.com/in/seonwoolim/"
-
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Seonu-Lim"
 # Site Footer
 footer:
   links:
