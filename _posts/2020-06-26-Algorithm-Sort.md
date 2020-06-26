@@ -107,4 +107,4 @@ def solution(citations):
 
 Sort 문제들 푸는 내내 sort 함수를 아주 잘 썼는데, 다른 문제들에서는 sort 를 너무 남발하면 효율성 실패가 뜨는 경우가 꽤 있었다. sort 의 시간복잡도가 O(nlogn) 이라고 하니, 만약 다른 알고리즘 문제인데 sorting 을 해야 한다면 sort 함수에 너무 의존하지 말고 다른 방법은 없을지 고민해보자. Python의 주요 함수의 시간 복잡도를 정리해 둔 링크를 찾았다. 효율성 문제가 있을 때 아래 링크를 확인해보는 것도 좋을 것 같다.
 
-#[Complexity of Python Operations](https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt)
+# [Complexity of Python Operations](https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt)
