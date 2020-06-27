@@ -63,15 +63,16 @@ def solution(numbers) :
 
 1. 원소의 합이 0인 경우, 즉 모든 원소가 0일 때에는 굳이 function 전체를 실행하지 않아도 된다.(이거때문에 자꾸 효율성 실패 떴었다.) 그래서 맨 처음에 모든 원소가 0일 경우를 집어넣었다.
 2. 원소 합이 0이 아닌 경우
-  * 원소들을 string으로 변환하여 그 리스트를 stn 이라고 저장해둔다.
-  * 이렇게 변환한 원소들 중 가장 길이가 긴 놈의 길이를 getmaxlen이라고 저장해둔다.
-  * sorting을 위해 index 를 만든다. 그냥 stn의 길이만큼의 range list 임.
-  * stn의 원소(n)에 대해 for loop를 돌린다.
-    * n의 길이가 getmaxlen보다 짧을 경우, n을 4번 반복해서 길이를 늘려버린 다음에 getmaxlen 만큼으로 자르고 newn이라고 저장하고 newstn 에 append 한다.
-    * n의 길이가 이미 getmaxlen 일 경우, 그냥 바로 newstn에 append 한다.
-  * newstn을 기준으로 index 를 decreasing order 로 sort 한다.
-  * index 순서로 stn을 불러오면 sorting 된 stn이 된다.
-  * 이걸 하나의 string 으로 붙여서 return 한다.
+  + 원소들을 string으로 변환하여 그 리스트를 stn 이라고 저장해둔다.
+  + 이렇게 변환한 원소들 중 가장 길이가 긴 놈의 길이를 getmaxlen이라고 저장해둔다.
+  + sorting을 위해 index 를 만든다. 그냥 stn의 길이만큼의 range list 임.
+  + stn의 원소(n)에 대해 for loop를 돌린다.
+      - n의 길이가 getmaxlen보다 짧을 경우, n을 4번 반복해서 길이를 늘려버린 다음에 getmaxlen 만큼으로 자르고 newn이라고 저장하고 newstn 에 append 한다.
+      - n의 길이가 이미 getmaxlen 일 경우, 그냥 바로 newstn에 append 한다.
+
+  + newstn을 기준으로 index 를 decreasing order 로 sort 한다.
+  + index 순서로 stn을 불러오면 sorting 된 stn이 된다.
+  + 이걸 하나의 string 으로 붙여서 return 한다.
 
 이제 다른 사람들의 풀이를 보자.
 
