@@ -67,8 +67,8 @@ def solution(numbers) :
   * 이렇게 변환한 원소들 중 가장 길이가 긴 놈의 길이를 getmaxlen이라고 저장해둔다.
   * sorting을 위해 index 를 만든다. 그냥 stn의 길이만큼의 range list 임.
   * stn의 원소(n)에 대해 for loop를 돌린다.
-    - n의 길이가 getmaxlen보다 짧을 경우, n을 4번 반복해서 길이를 늘려버린 다음에 getmaxlen 만큼으로 자르고 newn이라고 저장하고 newstn 에 append 한다.
-    - n의 길이가 이미 getmaxlen 일 경우, 그냥 바로 newstn에 append 한다.
+    * n의 길이가 getmaxlen보다 짧을 경우, n을 4번 반복해서 길이를 늘려버린 다음에 getmaxlen 만큼으로 자르고 newn이라고 저장하고 newstn 에 append 한다.
+    * n의 길이가 이미 getmaxlen 일 경우, 그냥 바로 newstn에 append 한다.
   * newstn을 기준으로 index 를 decreasing order 로 sort 한다.
   * index 순서로 stn을 불러오면 sorting 된 stn이 된다.
   * 이걸 하나의 string 으로 붙여서 return 한다.
