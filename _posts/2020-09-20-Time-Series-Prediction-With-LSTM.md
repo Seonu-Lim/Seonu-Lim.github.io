@@ -223,11 +223,11 @@ Epoch  10 train loss: 0.0176 test loss: 0.0201
 
 loss의 변화를 그려보면 아래와 같았다.
 ```python
-plt.plot(train_hist.flatten())
+plt.plot(train_hist.transpose().flatten())
 ```
 ![train_hist](/assets/train_hist.png)
 ```python
-plt.plot(test_hist.flatten())
+plt.plot(test_hist.transpose().flatten())
 ```
 ![test_hist](/assets/test_hist.png)
 
