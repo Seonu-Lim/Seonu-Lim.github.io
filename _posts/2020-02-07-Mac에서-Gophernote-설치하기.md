@@ -1,4 +1,6 @@
 ---
+layout: single
+classes: wide
 title: "Mac 에서 Gophernote 설치하기"
 categories:
   - Golang

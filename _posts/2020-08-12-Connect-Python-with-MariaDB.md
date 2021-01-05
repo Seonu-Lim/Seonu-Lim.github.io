@@ -1,4 +1,6 @@
 ---
+layout: single
+classes: wide
 title: "Python에 MariaDB 에 있는 데이터 가져오기"
 categories:
   - Python

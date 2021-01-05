@@ -1,4 +1,6 @@
 ---
+layout: single
+classes: wide
 title: "우리나라 지도의 위도경도 데이터."
 categories:
   - Python

@@ -1,4 +1,6 @@
 ---
+layout: single
+classes: wide
 title: "알알못 통계학과의 알고리즘 입문: Sort"
 categories:
   - Python
